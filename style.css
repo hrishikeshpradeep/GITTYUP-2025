@@ -1,0 +1,226 @@
+/* ============================
+   COLOR VARIABLES
+============================ */
+:root {
+    --bg: #0d0d0d;
+    --bg-light: #1a1a1a;
+    --text: #d6d6d6;
+    --accent: #00ff9d;
+    --accent-dim: #00cc7d;
+
+    --font-main: "Courier New", monospace;
+    --font-body: "Consolas", monospace;
+}
+
+/* ============================
+   GLOBAL
+============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+/* ============================
+   HEADER / NAV
+============================ */
+.header {
+    width: 100%;
+    padding: 20px 10%;
+    background: var(--bg-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-family: var(--font-main);
+    font-size: 1.3rem;
+    color: var(--accent);
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+.nav a:hover {
+    color: var(--accent-dim);
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+/* ============================
+   HERO
+============================ */
+.hero {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-family: var(--font-main);
+}
+
+.role {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: var(--accent);
+}
+
+.tagline {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.location {
+    margin-top: 10px;
+    color: var(--accent-dim);
+}
+
+.social-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ============================
+   SECTIONS
+============================ */
+.section h2 {
+    font-family: var(--font-main);
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: var(--accent);
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-box {
+    background: var(--bg-light);
+    padding: 20px;
+    border-left: 3px solid var(--accent);
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--bg-light);
+    padding: 25px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+}
+
+/* Education */
+.edu-box {
+    background: var(--bg-light);
+    padding: 30px;
+    border-left: 3px solid var(--accent);
+}
+
+/* Interests */
+.interests-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Contact */
+.contact-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* ============================
+   FOOTER
+============================ */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: #111;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+/* ============================
+   RESPONSIVE / MOBILE
+============================ */
+@media (max-width: 900px) {
+    .nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--bg-light);
+        width: 200px;
+        flex-direction: column;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+}
