@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{FULL_NAME}} | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ================= HEADER / NAV ================= -->
+    <header class="header">
+        <div class="logo"> &lt;{{FULL_NAME}} /&gt; </div>
+
+        <nav class="nav" id="navMenu">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="menu-btn" id="menuBtn">&#9776;</div>
+    </header>
+
+    <main>
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="about">
+            <h1 class="glitch">{{FULL_NAME}}</h1>
+            <h2 class="role">{{CURRENT_ROLE}}</h2>
+            <p class="tagline">{{SHORT_TAGLINE}}</p>
+
+            <div class="location">
+                <span>📍 {{LOCATION}}</span>
+            </div>
+
+            <div class="social-links">
+                <a href="{{GITHUB_URL}}" target="_blank">GitHub</a>
+                <a href="{{LINKEDIN_URL}}" target="_blank">LinkedIn</a>
+                <a href="mailto:{{EMAIL_ADDRESS}}">Email</a>
+            </div>
+        </section>
+
+        <!-- ================= SKILLS ================= -->
+        <section class="section" id="skills">
+            <h2>&gt; Skills_</h2>
+
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h3>Languages</h3>
+                    <p>{{PROGRAMMING_LANGUAGES}}</p>
+                </div>
+
+                <div class="skill-box">
+                    <h3>Tools & Platforms</h3>
+                    <p>{{FRAMEWORKS_TOOLS}}</p>
+                </div>
+
+                <div class="skill-box">
+                    <h3>Core Concepts</h3>
+                    <p>{{CORE_CONCEPTS}}</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECTS ================= -->
+        <section class="section" id="projects">
+            <h2>&gt; Projects_</h2>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>{{PROJECT_1_NAME}}</h3>
+                    <p>{{PROJECT_1_DESC}}</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>{{PROJECT_2_NAME}}</h3>
+                    <p>{{PROJECT_2_DESC}}</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>{{PROJECT_3_NAME}}</h3>
+                    <p>{{PROJECT_3_DESC}}</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EDUCATION ================= -->
+        <section class="section" id="education">
+            <h2>&gt; Education_</h2>
+
+            <div class="edu-box">
+                <h3>{{UNIVERSITY_NAME}}</h3>
+                <p>{{DEGREE_MAJOR}}</p>
+                <p>Class of {{GRAD_YEAR}}</p>
+            </div>
+        </section>
+
+        <!-- ================= INTERESTS ================= -->
+        <section class="section" id="interests">
+            <h2>&gt; Interests_</h2>
+
+            <div class="interests-grid">
+                <div>
+                    <h3>Hobbies</h3>
+                    <p>{{HOBBIES}}</p>
+                </div>
+                <div>
+                    <h3>Soft Skills</h3>
+                    <p>{{SOFT_SKILLS}}</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section class="section" id="contact">
+            <h2>&gt; Contact_</h2>
+
+            <p>Feel free to reach out to me:</p>
+
+            <div class="contact-links">
+                <a href="{{GITHUB_URL}}" target="_blank">GitHub</a>
+                <a href="{{LINKEDIN_URL}}" target="_blank">LinkedIn</a>
+                <a href="mailto:{{EMAIL_ADDRESS}}">{{EMAIL_ADDRESS}}</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <p>&copy; {{FULL_NAME}} — Portfolio</p>
+    </footer>
+
+    <!-- ================= JAVASCRIPT (MOBILE MENU) ================= -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
