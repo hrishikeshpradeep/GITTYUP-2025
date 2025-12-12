@@ -1,159 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hrishikesh Pradeep — Frontend Engineer & UI/UX Designer</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | John Doe</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#hero">
-        <span class="mono brand-name">hrishikesh.pr</span>
-        <span class="role mono">Frontend Engineer • UI/UX Designer</span>
-      </a>
+    <header class="navbar">
+        <div class="logo">John Doe</div>
+        <nav id="nav-menu" class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </header>
 
-      <nav class="nav" id="nav">
-        <ul class="nav-list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1 class="hero-title">John Doe</h1>
+            <h2 class="hero-role">Systems Engineer</h2>
+            <p class="hero-tagline">Passionate about building efficient digital solutions.</p>
+            <p class="hero-location">📍 Bengaluru, India</p>
+        </section>
 
-      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <section id="hero" class="hero section">
-      <div class="container hero-grid">
-        <div class="intro">
-          <h1 class="mono name">Hrishikesh Pradeep</h1>
-          <p class="tagline mono">Building blazing-fast interfaces with pixel-perfect design — one neon pixel at a time.</p>
-
-          <ul class="meta mono">
-            <li>Role: Frontend Engineer &amp; UI/UX Designer</li>
-            <li>Location: Kozhikode, Kerala</li>
-            <li>Email: <a href="mailto:hrishikeshpradeep0@gmail.com">hrishikeshpradeep0@gmail.com</a></li>
-          </ul>
-
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-ghost" href="#contact">Get in touch</a>
-          </div>
-        </div>
-
-        <div class="terminal-card mono" aria-hidden="true">
-          <div class="term-header">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="term-title">~ $ portfolio / run</span>
-          </div>
-          <div class="term-body">
-            <pre>
-$ whoami
-> hrishikesh.pr — frontend engineer
-$ skills --list
-> html css javascript typescript react figma git
-$ focus
-> performant UI, accessibility, pixel-perfect designs
-            </pre>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="container">
-        <h2 class="section-title mono">About</h2>
-        <p class="lead">
-          I'm a Frontend Engineer and UI/UX Designer who loves turning complex problems into crisp, fast, and accessible user experiences.
-          With ~2.5 years of practical experience crafting interactive interfaces and design systems, I focus on performance, semantic markup,
-          and delightful micro-interactions — all within a clean "terminal" aesthetic.
-        </p>
-
-        <div class="about-grid">
-          <div class="card">
-            <h3 class="mono">Interests</h3>
-            <ul>
-              <li>Pixel art & micro-interactions</li>
-              <li>Custom mechanical keyboards</li>
-              <li>Open-source contributions</li>
-              <li>Street & travel photography</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3 class="mono">Soft Skills</h3>
-            <ul>
-              <li>Collaborative communicator</li>
-              <li>Problem solving & debugging</li>
-              <li>Design empathy & attention to detail</li>
-              <li>Time management & mentorship</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects">
-      <div class="container">
-        <h2 class="section-title mono">Selected Projects</h2>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="mono">NeonNote</h3>
-              <span class="pill mono">Web App</span>
-            </div>
-            <p>
-              A minimal, terminal-styled note-taking app with local-first storage, markdown support, and lightning-fast keyboard navigation.
-              Built with semantic HTML, vanilla JS and a tiny CSS system focused on accessibility and offline-first UX.
-            </p>
-            <ul class="proj-tech mono">
-              <li>HTML / CSS / JS</li>
-              <li>IndexedDB</li>
-              <li>Accessible keyboard UX</li>
-            </ul>
-            <div class="proj-links">
-              <a class="mono" href="#">Live</a>
-              <a class="mono" href="#">Source</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="mono">VizDash</h3>
-              <span class="pill mono">Dashboard</span>
-            </div>
-            <p>
-              Lightweight analytics dashboard prototype focused on visual clarity and performance.
-              Implemented progressive loading, virtualization for large lists, and custom SVG microcharts to keep bundle size tiny.
-            </p>
-            <ul class="proj-tech mono">
-              <li>HTML / CSS / JS</li>
-              <li>SVG charts</li>
-              <li>Performance-first design</li>
-            </ul>
-            <div class="proj-links">
-              <a class="mono" href="#">Case study</a>
-              <a class="mono" href="#">Source</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="mono">PortScan (This Site)</h3>
-              <span class="pill mono">Portfolio</span>
-            </div>
-            <p>
-              A single-page portfolio template that embraces a hacker/terminal aesthetic while
+        <!-- ABOUT SECTION -->
+        <section id="about" class="
