@@ -3,30 +3,104 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | John Doe</title>
+    <title>Portfolio — Placeholder Name</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <header class="navbar">
-        <div class="logo">John Doe</div>
-        <nav id="nav-menu" class="nav-links">
+        <div class="nav-brand">Portfolio</div>
+        <nav class="nav-links" id="navMenu">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-toggle" id="navToggle">&#9776;</div>
     </header>
 
     <main>
         <!-- HERO SECTION -->
         <section class="hero">
-            <h1 class="hero-title">John Doe</h1>
-            <h2 class="hero-role">Systems Engineer</h2>
-            <p class="hero-tagline">Passionate about building efficient digital solutions.</p>
-            <p class="hero-location">📍 Bengaluru, India</p>
+            <h1 class="hero-title">Placeholder Name</h1>
+            <p class="hero-role">Professional Title</p>
+            <p class="hero-tagline">An impactful professional tagline goes here.</p>
+            <p class="hero-location">Based in: Unknown Location</p>
         </section>
 
         <!-- ABOUT SECTION -->
-        <section id="about" class="
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a dedicated professional focused on delivering high-quality technical solutions.
+                With a strong foundation from Placeholder University (Class of 20XX) and a degree in a specialized major,
+                I continuously strive to improve my craft and contribute to impactful projects.
+            </p>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-block">
+                    <h3>Languages</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-block">
+                    <h3>Tools & Platforms</h3>
+                    <p>Git, Linux, VS Code</p>
+                </div>
+                <div class="skill-block">
+                    <h3>Core Concepts</h3>
+                    <p>UI/UX, Responsive Design, Accessibility</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project">
+                <h3>Project One</h3>
+                <p>A clean placeholder description of the first highlighted project.</p>
+            </div>
+
+            <div class="project">
+                <h3>Project Two</h3>
+                <p>A placeholder description summarizing the second featured project.</p>
+            </div>
+
+            <div class="project">
+                <h3>Project Three</h3>
+                <p>A placeholder description for the third notable project.</p>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact</h2>
+
+            <p>📧 Email: placeholder@email.com</p>
+            <p>🐙 GitHub: github.com/placeholder</p>
+            <p>🔗 LinkedIn: linkedin.com/in/placeholder</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© Placeholder Name — All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
+
